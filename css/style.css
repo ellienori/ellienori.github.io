@@ -16,7 +16,7 @@ body {
   color: white;
   font-style: oblique;
   font: bold;
-  opacity: 70%;
+  opacity: 80%;
   padding: 1%;
   text-align: right;
   font-size: 1.2em;
@@ -26,13 +26,13 @@ body {
   padding: 5px;
 
   position: absolute;
-  top: 33%;
+  top: 26%;
   left: 50%;
   transform: translate(-50%, 0%);
 
   width: 600px;
   height: 60px;
-  opacity: 30%;
+  opacity: 50%;
   
   border-top: none;
   border-left: none;
@@ -40,12 +40,12 @@ body {
   border-bottom: none;
 
   font-size: 3em;
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+  font-family: 'Roboto', sans-serif;
 }
 
 #greeting {
   position: absolute;
-  top: 28%;
+  top: 21%;
   left: 50%;
   transform: translate(-50%, 0%);
 
@@ -59,26 +59,31 @@ body {
   margin: auto;
 
   position: absolute;
-  top: 40%;
+  top: 31%;
   left: 50%;
   transform: translate(-50%, 0%);
 
   color: white;
   opacity: 80%;
   font-size: 10em;
+
+  background: linear-gradient(to right, #e27573, #8ca6ce);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 #todo-form input {
-  padding: 5px;
+  padding: 2px;
+  border-radius: 15px;
 
   position: absolute;
-  top: 62%;
+  top: 51%;
   left: 50%;
   transform: translate(-50%, 0%);
 
-  width: 600px;
+  width: 610px;
   height: 40px;
-  opacity: 30%;
+  opacity: 50%;
   
   border-top: none;
   border-left: none;
@@ -90,13 +95,17 @@ body {
 }
 
 #todo-list {
-  padding: 5px;
+  background-color: rgba(255, 255, 255, .4);
+  width: 610px;
+  border-radius: 15px;
+
+  padding: 2px;
   list-style: none;
   overflow-y: scroll;
   height: 20%;
 
   position: absolute;
-  top: 68%;
+  top: 56%;
   left: 50%;
   transform: translate(-50%, 0%);
 
@@ -107,6 +116,10 @@ body {
 
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
+}
+
+#todo-list li {
+  padding: 3px;
 }
 
 #todo-list::-webkit-scrollbar {

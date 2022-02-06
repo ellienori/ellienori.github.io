@@ -12,7 +12,7 @@ function saveTodoArr() {
 
 function deleteTodo(event) {
   const li = event.target.parentElement;
-  todoArr = todoArr.filter(value => value.id !== parseInt(li.id));
+  todoArr = todoArr.filter((value) => value.id !== parseInt(li.id));
   saveTodoArr();
   li.remove();
 }
@@ -23,6 +23,22 @@ function showTodo(todoObj) {
   const span = document.createElement("span");
   span.innerText = todoObj.text;
 
+  span.addEventListener(
+    "mouseover",
+    () => {
+      span.innerText = "✖";
+      //span.setAttribute("style", "opacity: 40%");
+    },
+    false
+  );
+  span.addEventListener(
+    "mouseout",
+    () => {
+      span.innerText = todoObj.text;
+      //span.setAttribute("style", "opacity: 90%");
+    },
+    false
+  );
   span.addEventListener("click", deleteTodo);
   /*
   const button = document.createElement("button");
@@ -31,14 +47,14 @@ function showTodo(todoObj) {
 */
 
   li.appendChild(span);
-//  li.appendChild(button);
+  //  li.appendChild(button);
   todoList.appendChild(li);
 }
 
 function onTodoSubmit(event) {
   event.preventDefault();
   const newTodo = todoInput.value;
-  todoInput.value ="";
+  todoInput.value = "";
 
   const newTodoObj = {
     text: newTodo,
